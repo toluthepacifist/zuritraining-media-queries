@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-image: url("./images/bg-intro-desktop.png");
+    background-color: hsl(0, 100%, 74%);
+    color: white;
+    font-family: 'Poppins', sans-serif;    
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container > div {
+    flex: 1;
+    padding: 0 20px;
+}
+h1{
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 50px;
+    margin-bottom: 1.5rem;
+}
+p{
+    font-weight: 500;
+    font-size: 1em;    
+    opacity: 0.8;
+}
+.box{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.box-blue{
+    background-color: hsl(248, 32%, 49%);
+    padding: 18px;
+}
+.form-control {
+    position: relative;
+    margin-bottom: 30px;
+}
+.form-control small{
+    position: absolute;
+    bottom: -20px;
+    right:0;
+    opacity: 0;
+    text-align: right;
+}
+input{
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%);
+    font-family: 'Poppins', sans-serif;    
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 25px;
+    display: block;
+    width: 100%;
+}
+input:focus {
+    border: 1px solid hsl(249, 10%, 26%);
+    outline: none;
+}
+input:invalid {
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+}
+  
+input:valid  .error {
+    visibility: hidden;
+}
+  
+.error {
+    font-size: 11px;
+    opacity: 70%;
+    font-weight: 600;
+    text-align: end;
+    font-style: italic;
+    color: hsl(0, 100%, 61%);
+}
+button{
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 5px;
+    border: 1px solid hsl(154, 59%, 40%);
+    box-shadow: 0  2px hsl(154, 59%, 40%);
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;    
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 25px;
+    display: block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 100%;
+}
+button:focus{
+    outline: none;
+}
+button:active{
+    box-shadow: 0 0 hsl(154, 59%, 40%);
+    transform: translateY(2px);
+}
+small{
+    display: block;
+    color: #bbb;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+small a{
+    color:hsl(0, 100%, 74%);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 912px){
+    body{
+        background-image: url(./images/bg-intro-mobile.png);
+    }
+    .container{
+        min-width: 375px;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+    }
+    h1{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+}
